@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0 auto;
+}
+
+body {
+    overflow: hidden;
+}
+
+.center-600 {
+    margin: 0 auto;
+    width: 620px;
+}
+
+#me-img {
+    position: relative;
+    float: left;
+    opacity: 0.85;
+
+   transition: opacity 1s;
+   -moz-transition: opacity 1s;
+   -webkit-transition: opacity 1s;
+} #me-img:hover { opacity: 1; }
+
+a {
+    text-decoration: none;
+    color: #9A4A4A;
+}
+a:hover {
+    color: #DC6A6A !important;
+    text-shadow: 0.5px 0px 0.1px #9A4A4A;
+}
+a:visited { color: #9A4A4A; }
+
+
+
+.me-intro {
+    float: left;
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: 18px;
+    color: gray;
+    width: 360px;
+    padding-top: 10px;
+}
+
+.text-shader-1 {
+    background-color: white;
+    z-index: 10;
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    -webkit-mask-image: -webkit-gradient(linear, 44% top, 40% top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+.text-shader-active {
+    -webkit-transition: -webkit-transform 1.2s linear;
+    -webkit-transform: translateX(700px);
+    -moz-translation: -moz-transform 1.2s linear;
+    -moz-transform: translateX(700px);
+}
+
+/* Nav Styles*/
+
+.nav-effect {
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    font-weight: 300;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    font-size: 18px;
+}
+
+.nav-effect a {
+    margin: 15px;
+    padding: 10px;
+    color: gray;
+    text-shadow: none;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.nav-effect a::before,
+.nav-effect a::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background:  #DC6A6A;  /* used to be #3399CC*/
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.nav-effect a::before {
+    top: 0;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.nav-effect a::after {
+    bottom: 0;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+.nav-effect a:hover,
+.nav-effect a:focus {
+    color: #DC6A6A;  /* used to be #3399CC*/
+}
+
+.nav-effect a:hover::before,
+.nav-effect a:focus::before,
+.nav-effect a:hover::after,
+.nav-effect a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+
+
+
+.fade-in-on-load {
+
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.85; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.85; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.85; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.85; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 0.85; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

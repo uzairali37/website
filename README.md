@@ -1,2 +1,2 @@
-# website
-website for huma
+# humasarwar12.github.io
+Personal website
